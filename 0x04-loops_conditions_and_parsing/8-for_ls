@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# a Bash script that displays:
+# displays the current directory
 for i in *
 do
-  echo "$i"
+    echo "$i" | cut -d '-' -f 2 
 done
