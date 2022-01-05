@@ -1,2 +1,3 @@
-#reset apacher server
-sudo service apache2 start
+#!/usr/bin/env bash
+## Reset apache server
+#sudo service apache2 start
