@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
     Python script that, exports data in the JSON format.
-    """
+"""
 
 import json
 import requests
@@ -23,8 +23,7 @@ if __name__ == "__main__":
             tasks.append({"task": t.get("title"),
                           "completed": t.get("completed"),
                           "username": user.get("username")})
-            data["{}".format(id)] = tasks
+        data["{}".format(id)] = tasks
 
-            with open('todo_all_employees.json', 'w') as f:
-                json.dump(
-                    {int(x): data[x] for x in data.keys()}, f, sort_keys=True)
+    with open('todo_all_employees.json', 'w') as f:
+        json.dump({int(x): data[x] for x in data.keys()}, f, sort_keys=True)

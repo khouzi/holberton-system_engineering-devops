@@ -18,6 +18,5 @@ if __name__ == "__main__":
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for user_todo in user_todos:
             writer.writerow([USER_ID, USERNAME,
-                             str(user_todo.get(
-                                 "completed")),
+                             str(user_todo.get("completed")),
                              user_todo.get("title")])

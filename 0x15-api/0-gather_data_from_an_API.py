@@ -28,12 +28,13 @@ def fetch_api():
             # completed_todos.append(todo["title"])
             task_list += "\t " + todo.get("title") + "\n"
 
-            print("Employee {} is done with tasks({}/{}):".format(
-                user_name,
-                number_completed_todos,
-                number_of_todos
-            ))
-            print(task_list[:-1])
+    print("Employee {} is done with tasks({}/{}):".format(
+        user_name,
+        number_completed_todos,
+        number_of_todos
+    ))
+    print(task_list[:-1])
 
-            if __name__ == "__main__":
-                fetch_api()
+
+if __name__ == "__main__":
+    fetch_api()

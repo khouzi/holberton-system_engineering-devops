@@ -25,9 +25,8 @@ if __name__ == "__main__":
             data['completed'] = todo.get('completed')
             data['username'] = username
             data_list.append(data)
-            all_data[user_id] = data_list
-            with open(file_name, 'w', encoding='utf-8') as f:
-                json.dump(
-                    all_data, f)
-                except ValueError:
-                    exit()
+        all_data[user_id] = data_list
+        with open(file_name, 'w', encoding='utf-8') as f:
+            json.dump(all_data, f)
+    except ValueError:
+        exit()
